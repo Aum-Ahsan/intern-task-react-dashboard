@@ -152,10 +152,7 @@ The application focuses on **clean UI, dynamic state management, and real-world 
 
 This project is licensed under the **MIT License**.
 
----
 
-### 🧠 Interview-Ready Summary (Optional)
 
-> “This project demonstrates dynamic UI updates using React Context, Tailwind-based responsive design, and real-world image upload integration using Cloudinary.”
 
 
