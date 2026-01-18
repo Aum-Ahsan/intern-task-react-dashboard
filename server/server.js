@@ -13,6 +13,10 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
 
 // Middleware
 app.use(cors());
@@ -69,14 +73,10 @@ const writeData = (data) => {
 // Routes
 
 // GET /api/components - Retrieve current component data
-app.get('/api/components', (req, res) => {
-  try {
-    const data = readData();
-    res.json(data);
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch data' });
-  }
+app.get("/", (req, res) => {
+  res.status(200).send("Backend is running on Render 🚀");
 });
+
 
 // POST /api/components - Update component data
 app.post('/api/components', (req, res) => {
