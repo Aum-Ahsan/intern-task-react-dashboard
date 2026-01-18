@@ -11,21 +11,21 @@ const Navbar = () => {
             <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400">
                Ahsan Brand
             </div>
-            <div className="flex space-x-8">
+            <div className="flex items-center space-x-8">
                 {links.map((link, index) => (
-                    <a
+                    <Link
                         key={index}
-                        href={link.url}
+                        to={link.url}
                         className="text-gray-300 hover:text-white transition-colors text-sm font-medium uppercase tracking-wider relative group"
                     >
                         {link.label}
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
-                    </a>
+                    </Link>
                 ))}
                 {/* Dashboard Link for Admin access */}
                 <Link
                     to="/dashboard"
-                    className="text-gray-400 hover:text-white transition-colors text-sm font-medium uppercase tracking-wider ml-4 border border-gray-600 px-3 py-1 rounded hover:bg-gray-800"
+                    className="text-gray-400 hover:text-white transition-colors text-sm font-medium uppercase tracking-wider border border-gray-600 px-3 py-1 rounded hover:bg-gray-800 hover:border-gray-400 transition-all"
                 >
                     Dashboard
                 </Link>
